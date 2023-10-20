@@ -20,9 +20,20 @@ public class BoundaryPrendreEtal {
 			string.append("mais il faut être un habitant de notre village pour commercer ici\n");
 			System.out.println(string.toString());}
 		else {
-			installerVendeur(nomVendeur);
+			StringBuilder string= new StringBuilder("Bonjour ");
+			string.append(nomVendeur);
+			string.append(" ,je vais regarder si je peux vous trouver un étal");
+			System.out.println(string);
+			
+			if(!controlPrendreEtal.resteEtals()) {
+			System.out.println("Desolée "+ nomVendeur+ " ,je n'ai plus d'étal qui ne soit pas déjà occupé");		
 			}
-		}
+			else {
+			installerVendeur(nomVendeur);
+			
+			
+			}
+		}}
 	
 
 	private void installerVendeur(String nomVendeur) {
