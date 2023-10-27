@@ -19,9 +19,11 @@ public class ControlPrendreEtal {
 
 	public int prendreEtal(String nomVendeur, String produit, int nbProduit) {
 		//TODO a completer
+		
 		int numeroEtal = -1;
+		if (controlVerifierIdentite.verifierIdentite(nomVendeur)) {
 		numeroEtal=village.installerVendeur(village.trouverHabitant(nomVendeur), 
-				produit, nbProduit);
+				produit, nbProduit);}
 		return numeroEtal;
 		
 	}
